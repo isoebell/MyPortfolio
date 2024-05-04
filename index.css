@@ -3,7 +3,7 @@
     padding: 0;
     border: none;
     overflow-x: hidden;
-    cursor: url('img/red-mouse.png'), auto;
+    cursor: url('img/red-mouse.png'), default;
     }
     @font-face { 
 font-family: 'helv'; 
