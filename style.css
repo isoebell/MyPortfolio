@@ -6,7 +6,7 @@
     cursor: url('img/SiteElements/red-mouse.png'), auto;
     font-family: monospace;
     box-sizing: border-box;
-    font-size: 1em;
+    font-size: 1em; /* Set default font size to 1em */
     /* background-color: #f0f0f0; /* Background color */
 }
 
@@ -53,7 +53,7 @@
 }
 
 .overlay-text {
-    font-size: 0.9em; 
+    font-size: 0.9em; /* Overlay text can remain 0.9em */
     position: absolute; /* Position the overlay text */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
@@ -66,8 +66,6 @@
     text-align: center; /* Center text alignment */
 }
 
-
-
 .image-container img {
     width: 100%; /* Responsive images */
     height: auto; /* Maintain aspect ratio */
@@ -77,7 +75,7 @@
 
 .image-container p {
     text-align: left; /* Left align text */
-    font-size: 0.9em; /* Smaller text */
+    font-size: 1em; /* Changed to 1em for consistency */
     margin-top: 0.5em; /* Space between image and text */
 }
 
