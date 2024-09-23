@@ -23,6 +23,11 @@
 
 .header a {
     color: black;
+    cursor: url('img/SiteElements/red-mouse-hover.png'), auto; /* Custom cursor on link */
+}
+
+.header a:hover {
+    color: red;
 }
 
 .image-container {
@@ -67,6 +72,7 @@
     width: 100%; /* Responsive images */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove space below images */
+    cursor: url('img/SiteElements/red-mouse-hover.png'), auto; /* Custom cursor on link */
 }
 
 .image-container p {
