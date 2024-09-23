@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow-x: hidden;
+    cursor: url('img/red-mouse.png'), auto;
+    font-family: monospace;
+    box-sizing: border-box;
+    /* background-color: #f0f0f0; /* Background color */
+}
+
+.header {
+    font-size: 0.9em;
+    text-align: left;
+    padding: 1%;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 1%;
+    box-sizing: border-box;
+}
+
+.header a {
+    color: black;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to next row */
+    justify-content: space-between; /* Space out images */
+    width: 100%; /* Full width of the container */
+    padding: 1em; /* Optional padding */
+}
+
+.image-container a {
+    flex: 0 1 calc(20% - 1em); /* 5 columns with space between */
+    margin: 0.5em; /* Space between images */
+}
+
+.image-container a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+}
+
+.image-link {
+    position: relative; /* Set the parent to relative for proper positioning of the overlay */
+}
+
+.overlay-text {
+    font-size: 0.9em; 
+    position: absolute; /* Position the overlay text */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift back to truly center */
+    background-color: yellow; /* Yellow background */
+    color: black; /* Black text color */
+    padding: 5px; /* Some padding around the text */
+    border-radius: 3px; /* Optional: Rounded corners for the text */
+    z-index: 10; /* Ensure it's on top of the image */
+    text-align: center; /* Center text alignment */
+}
+
+
+
+.image-container img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove space below images */
+}
+
+.image-container p {
+    text-align: left; /* Left align text */
+    font-size: 0.9em; /* Smaller text */
+    margin-top: 0.5em; /* Space between image and text */
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 20% 80%; /* Two columns: descriptor and images */
+    gap: 1%; /* Space between projects */
+    padding: 1em; /* Optional padding */
+}
+
+.project-descriptor {
+    grid-column: 1; /* First column */
+    padding: 1%;
+}
+
+.project-images {
+    grid-column: 2; /* Second column */
+    display: grid; /* Use grid for images */
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 1em; /* Space between images */
+    padding-right: 1em; /* Padding on the right */
+    padding-bottom: 1em;
+    overflow: hidden; /* Prevent scrolling */
+    align-items: start;
+}
+
+.project-images img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove space below images */
+}
