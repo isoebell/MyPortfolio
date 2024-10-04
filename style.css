@@ -6,11 +6,12 @@
     cursor: url('img/SiteElements/red-mouse.png'), auto;
     font-family: monospace;
     box-sizing: border-box;
-    font-size: 0.98em; /* Set default font size to 1em */
+    font-size: 0.98em;
     /* background-color: #f0f0f0; /* Background color */
 }
 
 .header {
+    font-size: 0.9em;
     text-align: left;
     padding: 1%;
     width: 100vw;
@@ -19,6 +20,12 @@
     grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
     gap: 1%;
     box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+    .header {
+        grid-template-columns: repeat(2, 1fr); /* 2 column on smaller screens */
+    }
 }
 
 .header a {
@@ -38,6 +45,18 @@
     padding: 1em; /* Optional padding */
 }
 
+@media (max-width: 800px) {
+    .image-container {
+        flex-direction: column; /* Stack items in a column */
+    }
+
+    .image-container a {
+        flex: 0 1 100%; /* Full width for each item */
+        margin: 0.5em 0; /* Space between images vertically */
+    }
+}
+
+
 .image-container a {
     flex: 0 1 calc(20% - 1em); /* 5 columns with space between */
     margin: 0.5em; /* Space between images */
@@ -53,7 +72,7 @@
 }
 
 .overlay-text {
-    font-size: 0.9em; /* Overlay text can remain 0.9em */
+    font-size: 0.9em; 
     position: absolute; /* Position the overlay text */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
@@ -66,6 +85,8 @@
     text-align: center; /* Center text alignment */
 }
 
+
+
 .image-container img {
     width: 100%; /* Responsive images */
     height: auto; /* Maintain aspect ratio */
@@ -75,7 +96,7 @@
 
 .image-container p {
     text-align: left; /* Left align text */
-    font-size: 1em; /* Changed to 1em for consistency */
+    font-size: 0.9em; /* Smaller text */
     margin-top: 0.5em; /* Space between image and text */
 }
 
@@ -84,6 +105,13 @@
     grid-template-columns: 20% 80%; /* Two columns: descriptor and images */
     gap: 1%; /* Space between projects */
     padding: 1em; /* Optional padding */
+}
+
+@media (max-width: 800px) {
+    .project-container {
+        grid-template-columns: 50% 50%; /* Single column on smaller screens */
+    }
+    
 }
 
 .project-descriptor {
@@ -100,6 +128,12 @@
     padding-bottom: 1em;
     overflow: hidden; /* Prevent scrolling */
     align-items: start;
+}
+
+@media (max-width: 800px) {
+    .project-images {
+        grid-template-columns: repeat(1, 1fr); /* 1 columns on smaller screens */
+    }
 }
 
 .project-images img {
