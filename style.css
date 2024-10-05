@@ -107,7 +107,7 @@
     padding: 1em; /* Optional padding */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .project-container {
         grid-template-columns: 50% 50%; /* Single column on smaller screens */
     }
