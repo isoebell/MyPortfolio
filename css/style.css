@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow-x: hidden;
+    cursor: url('/img/SiteElements/mouse.png'), auto;
+    font-family: monospace;
+    box-sizing: border-box;
+    font-size: 0.98em;
+    /* background-color: #f0f0f0; /* Background color */
+}
+
+/* Highlighted Text Red */
+::selection {
+    background: rgb(255, 255, 0);
+    color: black; /* Optional: change the text color when selected */
+}
+
+/* For Firefox */
+::-moz-selection {
+    background: rgb(255, 255, 0);
+    color: black; /* Optional: change the text color when selected */
+}
+
+/* You may want to hide any UI elements while the image is fullscreen */
+body:fullscreen, body:-webkit-full-screen, body:-moz-full-screen, body:-ms-full-screen {
+    background-color: black; /* Set background to black */
+    margin: 0;
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Optionally, style the image in fullscreen */
+img:fullscreen {
+    width: 100%;  /* Makes the image fill the screen */
+    height: auto;
+    display: block; /* Remove any unwanted margins or spacing */
+}
+
+
+.header {
+    font-size: 1em;
+    text-align: left;
+    padding: 0.7%;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 1%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+    .header {
+        grid-template-columns: repeat(2, 1fr); /* 2 column on smaller screens */
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        font-size: 1.5em;
+        font-weight: lighter;
+        padding: 0.7%;
+    }
+
+    .image-container a {
+        font-size: 1.5em;
+    }
+
+    .project-descriptor p {
+        font-size: 1.5em;
+    }
+}
+
+.header a {
+    color: black;
+    cursor: url('/img/SiteElements/mouse-hover.png'), auto; /* Custom cursor on link */
+}
+
+.header a:hover {
+    color: red;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to next row */
+    justify-content: space-between; /* Space out images */
+    width: 100%; /* Full width of the container */
+    padding: 1em; /* Optional padding */
+}
+
+@media (max-width: 860px) {
+    .image-container {
+        flex-direction: column; /* Stack items in a column */
+    }
+
+    .image-container a {
+        flex: 0 1 100%; /* Full width for each item */
+        margin: 0.5em 0; /* Space between images vertically */
+    }
+
+}
+
+
+.image-container a {
+    flex: 0 1 calc(20% - 1em); /* 5 columns with space between */
+    margin: 0.5em; /* Space between images */
+}
+
+.image-container a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+}
+
+.image-link {
+    position: relative; /* Set the parent to relative for proper positioning of the overlay */
+}
+
+
+a {
+    position: relative;
+}
+.overlay-text {
+    font-size: 0.9em; 
+    position: absolute; /* Position the overlay text */
+    top: 40%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift back to truly center */
+    background-color: yellow; /* Yellow background */
+    color: black; /* Black text color */
+    padding: 5px; /* Some padding around the text */
+    border-radius: 3px; /* Optional: Rounded corners for the text */
+    z-index: 10; /* Ensure it's on top of the image */
+    text-align: center; /* Center text alignment */
+}
+
+
+
+.image-container img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove space below images */
+    cursor: url('/img/SiteElements/mouse-hover.png'), auto; /* Custom cursor on link */
+}
+
+.image-container p {
+    text-align: left; /* Left align text */
+    font-size: 1em; 
+    margin-top: 0.5em; /* Space between image and text */
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 20% 80%; /* Two columns: descriptor and images */
+    gap: 0.4%; /* Space between projects */
+    padding: 0.7%; /* Optional padding */
+    height: 100vh;
+}
+
+@media (max-width: 860px) {
+    .project-container {
+        display: block; /* Stack items vertically */
+        align-items: start; /* Align items to the start */
+        gap: 1em; /* Space between projects */
+    }
+
+    .project-descriptor {
+        margin-bottom: 0.5em; /* Space between descriptor and images */
+    }
+    
+}
+
+.project-descriptor {
+    grid-column: 1; /* First column */
+    font-size: 1em;
+}
+
+.project-descriptor a {
+    color: black; /* Text color */
+}
+
+.project-descriptor a:hover{
+    color: red;
+}
+
+.project-images {
+    grid-column: 2; /* Second column */
+    display: grid; /* Use grid for images */
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 1em; /* Space between images */
+    padding-right: 1em; /* Padding on the right */
+    padding-bottom: 1em;
+    overflow: hidden; /* Prevent scrolling */
+    align-items: start;
+    height: max-content;
+}
+
+.Open-and-Close .project-images{
+    display: grid; /* Use grid for images */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1em; /* Space between images */
+    padding-right: 1em; /* Padding on the right */
+    padding-bottom: 1em;
+    overflow: hidden; /* Prevent scrolling */
+    align-items: start;
+    height: max-content;
+}
+
+.for-change .project-images {
+    display: grid; /* Use grid for images */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 1em; /* Space between images */
+    padding-right: 1em; /* Padding on the right */
+    padding-bottom: 1em;
+    overflow: hidden; /* Prevent scrolling */
+    align-items: start;
+    height: max-content;
+}
+
+.for-change .project-images img{
+    box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.3);  /* Shadow for image */
+    transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    .project-images {
+        grid-template-columns: repeat(1, 1fr); /* 1 columns on smaller screens */
+    }
+}
+
+.project-images img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove space below images */
+}
+
+.embedded-website {
+    width: 60vw;
+    max-width: 100vw; /* Ensure it doesn't exceed the container width */
+    margin-left: 0.3% ; /* Center the iframe */
+    overflow: hidden; /* Prevent overflow */
+    height: max-content;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);  /* Shadow for iframe */
+
+}
+
+.embedded-website iframe {
+    width: 100%; /* Full width of the container */
+    height: 600px; /* Fixed height, adjust as needed */
+    border: none; /* Remove default border */
+}
