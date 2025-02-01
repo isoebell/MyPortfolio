@@ -328,3 +328,11 @@ a {
     color: red;
     text-decoration: none;
 }
+
+@media (max-width: 860px) {
+    .construction p {
+        text-align: left;
+        font-size: 2.5em;
+        padding: 2%;
+    }
+}
