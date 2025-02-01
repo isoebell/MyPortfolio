@@ -188,6 +188,8 @@ a {
     .project-descriptor {
         margin-bottom: 0.5em; /* Space between descriptor and images */
         padding: 1.8%
+        width: 99%;
+
     }
     
 }
