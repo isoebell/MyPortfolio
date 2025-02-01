@@ -1,14 +1,15 @@
 * {
+
     margin: 0;
-    padding: 0;
     border: none;
     overflow-x: hidden;
-    cursor: url('/img/SiteElements/mouse.png'), auto;
+    cursor: url('/img/SiteElements/mouse.svg'), auto;
     font-family: monospace;
     box-sizing: border-box;
     font-size: 0.98em;
     /* background-color: #f0f0f0; /* Background color */
 }
+
 
 /* Highlighted Text Red */
 ::selection {
@@ -45,13 +46,22 @@ img:fullscreen {
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-    gap: 1%;
+    gap: 1.5%;
     box-sizing: border-box;
+}
+
+.footer{
+    padding: 0.7%;
+    margin-bottom: 0.7%;
+
 }
 
 @media (max-width: 860px) {
     .header {
-        grid-template-columns: repeat(2, 1fr); /* 2 column on smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* 2 column on smaller screens */
+        padding: 2%;
+        gap: 0.3em;
+
     }
 }
 
@@ -59,11 +69,11 @@ img:fullscreen {
     .header {
         font-size: 1.5em;
         font-weight: lighter;
-        padding: 0.7%;
     }
 
     .image-container a {
         font-size: 1.5em;
+        
     }
 
     .project-descriptor p {
@@ -73,24 +83,35 @@ img:fullscreen {
 
 .header a {
     color: black;
-    cursor: url('/img/SiteElements/mouse-hover.png'), auto; /* Custom cursor on link */
+    /*cursor: url('/img/SiteElements/mouse-hover.png'), auto; /* Custom cursor on link */
 }
 
 .header a:hover {
     color: red;
 }
 
+
+
 .image-container {
     display: flex;
     flex-wrap: wrap; /* Allow images to wrap to next row */
     justify-content: space-between; /* Space out images */
     width: 100%; /* Full width of the container */
-    padding: 1em; /* Optional padding */
+    padding: 0.3%;
 }
+
+.image-container a img[src="img/LandingPage/RabbitofSevilleLP.gif"] {
+    /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: saturate(100%);
+    filter:hue-rotate(220deg);
+}
+
 
 @media (max-width: 860px) {
     .image-container {
         flex-direction: column; /* Stack items in a column */
+        margin: 0; /* Space between images */
+        padding: 1%; /* Optional padding */
     }
 
     .image-container a {
@@ -102,7 +123,7 @@ img:fullscreen {
 
 
 .image-container a {
-    flex: 0 1 calc(20% - 1em); /* 5 columns with space between */
+    flex: 0 1 calc(20% - 1.2em); /* 5 columns with space between */
     margin: 0.5em; /* Space between images */
 }
 
@@ -139,7 +160,7 @@ a {
     width: 100%; /* Responsive images */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove space below images */
-    cursor: url('/img/SiteElements/mouse-hover.png'), auto; /* Custom cursor on link */
+    /*cursor: url('/img/SiteElements/mouse-hover.png'), auto; /* Custom cursor on link */
 }
 
 .image-container p {
@@ -154,6 +175,7 @@ a {
     gap: 0.4%; /* Space between projects */
     padding: 0.7%; /* Optional padding */
     height: 100vh;
+    width: 100vw;
 }
 
 @media (max-width: 860px) {
@@ -165,6 +187,7 @@ a {
 
     .project-descriptor {
         margin-bottom: 0.5em; /* Space between descriptor and images */
+        padding: 1.8%
     }
     
 }
@@ -192,6 +215,26 @@ a {
     overflow: hidden; /* Prevent scrolling */
     align-items: start;
     height: max-content;
+}
+
+.project-video{
+    width: 90%; /* Make videos responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-video video {
+    width: 100%; /* Makes the video take the full width */
+    height: auto; /* Makes the video take the full height */
+    object-fit: cover; /* Ensures the video covers the area without distorting */
+    object-position: center; /* Keeps the video centered */
+}
+
+@media (max-width: 860px) {
+    .project-video {
+        width: 100%; /* Full width on smaller screens */
+        padding: 1.8%
+    }
+        
 }
 
 .Open-and-Close .project-images{
