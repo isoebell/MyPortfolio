@@ -1,12 +1,19 @@
+@font-face {
+    font-family: 'FragmentMono';
+    src: url('fonts/FragmentMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
 
     margin: 0;
     border: none;
     overflow-x: hidden;
     cursor: url('/img/SiteElements/mouse.svg'), auto;
-    font-family: monospace;
+    font-family: 'FragmentMono', monospace;
     box-sizing: border-box;
-    font-size: 0.98em;
+    font-size: 0.93em;
     /* background-color: #f0f0f0; /* Background color */
 }
 
@@ -56,6 +63,16 @@ img:fullscreen {
 
 }
 
+.footer a {
+    color: black;
+}
+
+.footer a:hover {
+    color: red;
+}
+
+
+
 @media (max-width: 860px) {
     .header {
         grid-template-columns: repeat(1, 1fr); /* 2 column on smaller screens */
@@ -78,6 +95,7 @@ img:fullscreen {
 
     .project-descriptor p {
         font-size: 1.5em;
+        padding: 2%;
     }
 }
 
@@ -268,6 +286,7 @@ a {
 @media (max-width: 800px) {
     .project-images {
         grid-template-columns: repeat(1, 1fr); /* 1 columns on smaller screens */
+        padding: 2%;
     }
 }
 
