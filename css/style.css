@@ -188,8 +188,6 @@ a {
     .project-descriptor {
         margin-bottom: 0.5em; /* Space between descriptor and images */
         padding: 1.8%
-        width: 99%;
-
     }
     
 }
@@ -197,6 +195,7 @@ a {
 .project-descriptor {
     grid-column: 1; /* First column */
     font-size: 1em;
+    width: 99%;
 }
 
 .project-descriptor a {
@@ -292,4 +291,21 @@ a {
     width: 100%; /* Full width of the container */
     height: 600px; /* Fixed height, adjust as needed */
     border: none; /* Remove default border */
+}
+
+
+.construction {
+    text-align: center;
+    margin-top: 10%;
+}
+.construction p {
+    font-size: 3em;
+}
+.construction a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.construction a:hover {
+    color: red;
+    text-decoration: none;
 }
