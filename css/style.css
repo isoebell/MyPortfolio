@@ -214,6 +214,17 @@ a {
     
 }
 
+@media (min-width: 1800px) {
+    .project-container {
+        padding: 0.3%;
+    }
+
+    .project-descriptor p {
+        font-size: 1.5em;
+        padding: 2%;
+    }
+}
+
 .project-descriptor {
     grid-column: 1; /* First column */
     font-size: 1em;
@@ -241,7 +252,7 @@ a {
 }
 
 .project-video{
-    width: 90%; /* Make videos responsive */
+    width: 70%; /* Make videos responsive */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -258,6 +269,12 @@ a {
         padding: 1.8%
     }
         
+}
+
+@media (min-width: 1800px) {
+    .project-video {
+        max-width: 50%;
+    }
 }
 
 .Open-and-Close .project-images{
