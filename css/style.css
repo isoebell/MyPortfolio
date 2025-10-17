@@ -377,7 +377,7 @@ a {
 }
 .construction a:hover {
     color: red;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 @media (max-width: 860px) {
@@ -387,3 +387,4 @@ a {
         padding: 2%;
     }
 }
+
