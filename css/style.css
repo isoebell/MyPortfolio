@@ -372,8 +372,8 @@ a {
     font-size: 3em;
 }
 .construction a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
 }
 .construction a:hover {
     color: red;
